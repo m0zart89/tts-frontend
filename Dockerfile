@@ -1,6 +1,5 @@
 FROM php:7-apache
 COPY /app /var/www/html/
-COPY docker-entrypoint.sh /
-RUN chmod +x /docker-entrypoint.sh
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["apache2","-DFOREGROUND"]
+COPY run.sh /
+RUN chmod +x /run.sh
+CMD ["/run.sh"]
