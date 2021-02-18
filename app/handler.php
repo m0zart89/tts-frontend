@@ -7,7 +7,7 @@ if(isset($_REQUEST['text']) && !empty($_REQUEST['text']) && filter_var($_REQUEST
 	//some business logic
 	$message = str_replace("!", ".", $message);
 
-	$url = getenv('BACKEND');
+	$url = getenv('BACKEND') ?: 'http://tts-backend:5002/api/tts';
 	
 	$ch = curl_init();
 
