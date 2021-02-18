@@ -7,7 +7,7 @@ if(isset($_REQUEST['text']) && !empty($_REQUEST['text']) && filter_var($_REQUEST
 	//some business logic
 	$message = str_replace("!", ".", $message);
 
-	$url = getenv('backend-url');
+	$url = getenv('BACKEND-URL');
 	
 	$ch = curl_init();
 
